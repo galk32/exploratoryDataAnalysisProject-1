@@ -3,9 +3,7 @@ hpc <- read.csv("~/Coursera/Coursera - Exploratory Data Analysis - R/week1/proje
 head(hpc)
 str(hpc)
 hpc$Date <- as.Date(hpc$Date, "%d/%m/%Y")
-hpc$Time <- strptime(hpc$Time, format = "%H:%M:%S")
 hpc$Global_active_power <- as.numeric(hpc$Global_active_power)
-
 #making the plot
 plotSample <- subset(hpc, Date == "2007-02-01" | Date == "2007-02-02")
 png(filename = "plot.1.png", width = 480, height =480, units = "px")

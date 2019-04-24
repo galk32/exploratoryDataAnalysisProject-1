@@ -1,7 +1,5 @@
 #importing the txt file
 hpc <- read.csv("~/Coursera/Coursera - Exploratory Data Analysis - R/week1/project 1/Coursera_project1/household_power_consumption.txt", sep=";", stringsAsFactors=FALSE)
-head(hpc)
-str(hpc)
 hpc$Date <- as.Date(hpc$Date, "%d/%m/%Y")
 hpc$Global_active_power <- as.numeric(hpc$Global_active_power)
 #making the plot
